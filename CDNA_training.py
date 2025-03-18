@@ -174,7 +174,8 @@ for ne in range(NUM_EXP):
             # forward + backward + optimize
 
             # calc auto encoder loss
-            outputs = AE_model(inputs)
+            # inputs = image_src.copy()
+            outputs = AE_model(inputs_src)
             ae_loss = AE_criterion(inputs_src, outputs)
             ae_tr_loss.append(ae_loss)
 
