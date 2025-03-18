@@ -64,10 +64,10 @@ class TripletLoss(nn.Module):
         return losses.mean()
 
 
-class AE(nn.Module):
-    def __init__(self,input_size1,input_size2,hidden_size1,hidden_size2, num_layers):
+class AE(nn.Module):  # nn.Module is pre-defined class acting as a parent class here
+    def __init__(self,input_size1,input_size2,hidden_size1,hidden_size2, num_layers):  # This is constructor is Python which will explicity being called once we create a instance of this class
     #def __init__(self):
-        super(AE, self).__init__()
+        super(AE, self).__init__()  # This is inheritence in python for called parent init method defined in nn.Module class
         latent_size = 2000
         self.num_layers = num_layers
         self.hidden_size1 = hidden_size1
