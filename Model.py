@@ -1,3 +1,4 @@
+# https://www.kaggle.com/code/hirotaka0122/triplet-loss-with-pytorch
 import torch
 
 
