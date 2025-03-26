@@ -194,7 +194,7 @@ for ne in range(NUM_EXP):
 
             # Triplet loss for Source Images
             loss_triplet_source = models.triplet_criterion(cl_outputs, positive_outputs, negative_outputs)
-            total_loss =  cl_loss + (0.1 * loss_triplet_source)
+            total_loss =  ae_loss + cl_loss + (0.1 * loss_triplet_source)
             total_tr_losses.append(total_loss)
             total_loss.backward()
 
